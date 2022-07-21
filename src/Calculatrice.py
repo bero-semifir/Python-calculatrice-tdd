@@ -1,4 +1,5 @@
-from math import inf as Infinity
+from cmath import exp
+from math import inf as Infinity, pow
 
 class Calculatrice:
     '''
@@ -16,6 +17,7 @@ class Calculatrice:
             return: resulat de l'addition
         '''
         return nombre1 + nombre2
+
 
     def division(self, numerateur, denominateur):
         '''
@@ -35,3 +37,17 @@ class Calculatrice:
 
 
         return numerateur / denominateur
+
+    def puissance(self, nombre, exposant):
+        '''
+            Mets un nombre à la puissance indiqué et le retourne
+
+            params:
+                nombre: nombre
+                exposant: nombre
+            
+            return: le nombre à la puissance exposant
+        '''
+        # return pow(nombre, exposant)
+        return nombre ** exposant
+
