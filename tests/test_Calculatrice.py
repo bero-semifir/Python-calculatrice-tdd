@@ -28,3 +28,15 @@ def test_division_par_zero():
 def test_division_nul():
     res = Calculatrice().division(0, 0)
     assert res == 0
+    assert Calculatrice().division(0, 25) == 0
+
+def test_puissance_entier():
+    assert Calculatrice().puissance(5, 2) == 25
+    assert Calculatrice().puissance(4, 3) == 64
+
+def test_puissance_negatif():
+    assert Calculatrice().puissance(5, -2) == 0.04
+    assert Calculatrice().puissance(28, -34) == 6.260758248562819e-50
+
+def test_puissance_zero():
+    assert Calculatrice().puissance(8, 0) == 1
